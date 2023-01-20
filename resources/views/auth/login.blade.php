@@ -26,6 +26,7 @@
                         Aun no tienes cuenta?.
                         <a href="{{ route('users.create') }}"> Registrarse</a>
                     </div>
+
                     @endif
                     <button type="submit" class="btn btn-primary w-100">
                         Log in

@@ -58,8 +58,7 @@ class CartController extends Controller
             foreach ($cart as $key => $item) {
                 if ($item['id'] === $product->id) {
                     $cart[$key]['stock'] += $quantity;
-                    $cart[$key]['total_u'] = $item['price'] * $item['stock'];
-
+                    $cart[$key]['total_u'] = ($item['price'] * $cart[$key]['stock']);
                     #refresh array
                     session(['cart' => $cart]);
                     return redirect()->route('home')->with('msj', 'Product Add');
